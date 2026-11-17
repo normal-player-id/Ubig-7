@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>profil digital responsif</title>
+        <link rel="stylesheet" href="ui_manager.css">
+    </head>
+    <body>
+        <main class="page-warpper">
+            <article class="profile-card">
+                <header class="card-aside">
+                    <div class="avatar-box">
+                        <video autoplay loop muted id="icon_utama">
+                            <source src="keqing.mp4">
+                        </video>
+                    </div>
+                    <h1 class="student-name">surya</h1>
+                    <p class="student-role">Junior Web Developer</p>
+                    <p class="student-school">SMKN 1 takeran - RPL</p>
+                    <button class="btn-contact" onclick="buka_modal()">Kirim 
+                        pesan
+                    </button>
+                </header>
+                <section class="card-content">
+                    <div class="bio-section">
+                        <h2 class="slection-nama">Tentang saya</h2>
+                        <p class="bio-text">
+                            siswa kelas 10 Rekayasa Perangkat Lunak yang berfokus mendalami
+                            arsitektur Front-End modern, tata letak CSS Flexbox, serta prinsip
+                            Mobile-First Responsive Design standar industri.
+                        </p>
+                    </div>
+                    <div class="skills-slection">
+                        <h2 class="slection-heading">keahlian & kompetensi</h2>
+                        <div class="skill-matrix">
+                        </div>
+                    </div>
+                    <div class="filter-buttons">
+                        <h3>Filter Proyek</h3>
+                        <button id="filterSemua" class="tombol-filter" onclick="filterProjects('Semua')">Semua</button>
+                        <button id="filterHTML" class="tombol-filter" onclick="filterProjects('HTML')">HTML</button>
+                        <button id="filterCSS" class="tombol-filter" onclick="filterProjects('CSS')">CSS</button>
+                        <button id="filterJS" class="tombol-filter" onclick="filterProjects('JavaScript')">JavaScript</button>
+                    </div>
+
+                    <div class="project-section">
+                        <h2 class="slection-heading">Proyek Saya</h2>
+                        <div id="project">
+
+                        </div>
+                    </div>
+                    <div id="project"></div>
+                    <p id="projectCount"></p>
+                </section>
+            </article>
+        </main>
+        <button id="bt_tema_id" class="bt_tema" onclick="ganti_tema()">ganti mode ke true</button>
+        <div id="modal" class="modal_overlay">
+            <div class="modal_box">
+                <h2>kirim pesan</h2>
+                <p>Silakan hubungi saya melalui email: link infalit </p>
+                <button id="btnTutupModal" class="bt_tutup" onclick="tutup_modal()">Tutup</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
